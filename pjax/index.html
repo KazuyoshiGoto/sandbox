@@ -8,12 +8,15 @@
     h1 {
         color: #900;
     }
+    #header, #primary {
+        background: #eee;
+    }
     </style>
 </head>
 
 <body>
     <div id="container">
-        <div id="brand"><h1>Pjax Test</h1></div>
+        <div id="brand"><h1>PjaxによるSPAのテスト</h1></div>
         <div id="header">
             <h2>トップページ</h2>
         </div>
@@ -23,12 +26,25 @@
             <p><a href="index2.html">ページ2へ</a></p>
         </div>
         <div id="secondary">
-            <p>大して加工してないのでブラウザで見ると普通に遷移してるだけだが、DevToolで開くとソースが書き換わっておりSPAになっていることが分かる。</p>
+            <pre>var Pjax = require('pjax-api').Pjax;
+new Pjax({
+    areas: [
+        // try to use the first query.
+        '#header, #primary',
+        // fallback, retrying with the second query.
+        '#container',
+        // fallback.
+        'body'
+    ]
+});</pre>
+            <p>サンプルのまま上記コードを設定している。</p>
+            <p>#container内の#hader,#primaryは該当するページの内容に書き換わる（グレーの箇所）。またbodyの外側も書き換わる。</p>
+            <p>大して加工してないのでブラウザで見ると普通に遷移してるように見えるが、DevToolで開くとElementsが書き換わっておりSPAになっていることが分かる。</p>
         </div>
 
     </div>
-    <script src="node_modules/spica/dist/spica.min.js"></script>
-    <script src="node_modules/pjax-api/dist/pjax-api.min.js"></script>
+    <script src="js/spica.min.js"></script>
+    <script src="js/pjax-api.min.js"></script>
     <script>
         var Pjax = require('pjax-api').Pjax;
         new Pjax({

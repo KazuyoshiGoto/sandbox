@@ -8,12 +8,15 @@
     h1 {
         color: #090;
     }
+    #header, #primary {
+        background: #eee;
+    }
     </style>
 </head>
 
 <body>
     <div id="container">
-        <div id="brand"><h1>Pjax Test</h1></div>
+        <div id="brand"><h1>PjaxによるSPAのテスト</h1></div>
         <div id="header">
             <h2>ページ2</h2>
         </div>
@@ -22,10 +25,12 @@
             <p>ここはページ2です。ここはページ2です。ここはページ2です。ここはページ2です。</p>
             <p><a href="index.html">トップページへ</a></p>
         </div>
+        <p>移動先のページでリロードされるとそのページの内容になるため、結局は従来通りのHTMLコーディングが欠かせない。</p>
+        <p>ユーザのUX向上に役立つほか、ElectronやWebViewアプリにも活用はできる。</p>
 
     </div>
-    <script src="node_modules/spica/dist/spica.min.js"></script>
-    <script src="node_modules/pjax-api/dist/pjax-api.min.js"></script>
+    <script src="js/spica.min.js"></script>
+    <script src="js/pjax-api.min.js"></script>
     <script>
         var Pjax = require('pjax-api').Pjax;
         new Pjax({

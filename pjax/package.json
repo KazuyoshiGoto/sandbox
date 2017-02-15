@@ -1,0 +1,19 @@
+{
+  "name": "pjax",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "grunt": "^1.0.1",
+    "gulp": "^3.9.1",
+    "jquery": "^3.1.1",
+    "pjax-api": "^3.6.0",
+    "spica": "0.0.55"
+  }
+}

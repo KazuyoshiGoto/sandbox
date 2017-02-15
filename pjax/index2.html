@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    h1 {
+        color: #090;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="brand"><h1>Pjax Test</h1></div>
+        <div id="header">
+            <h2>ページ2</h2>
+        </div>
+        <div id="primary">
+            <h3>ページ2の見出しです。</h3>
+            <p>ここはページ2です。ここはページ2です。ここはページ2です。ここはページ2です。</p>
+            <p><a href="index.html">トップページへ</a></p>
+        </div>
+
+    </div>
+    <script src="node_modules/spica/dist/spica.min.js"></script>
+    <script src="node_modules/pjax-api/dist/pjax-api.min.js"></script>
+    <script>
+        var Pjax = require('pjax-api').Pjax;
+        new Pjax({
+            areas: [
+                // try to use the first query.
+                '#header, #primary',
+                // fallback, retrying with the second query.
+                '#container',
+                // fallback.
+                'body'
+            ]
+        });
+    </script>
+</body>
+
+</html>

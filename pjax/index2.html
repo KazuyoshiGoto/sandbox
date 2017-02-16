@@ -2,48 +2,34 @@
 <html lang="ja">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <style>
-    h1 {
-        color: #090;
-    }
-    #header, #primary {
-        background: #eee;
-    }
-    </style>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div id="container">
-        <div id="brand"><h1>PjaxによるSPAのテスト</h1></div>
-        <div id="header">
-            <h2>ページ2</h2>
-        </div>
-        <div id="primary">
-            <h3>ページ2の見出しです。</h3>
-            <p>ここはページ2です。ここはページ2です。ここはページ2です。ここはページ2です。</p>
-            <p><a href="index.html">トップページへ</a></p>
-        </div>
-        <p>移動先のページでリロードされるとそのページの内容になるため、結局は従来通りのHTMLコーディングが欠かせない。</p>
-        <p>ユーザのUX向上に役立つほか、ElectronやWebViewアプリにも活用はできる。</p>
+<div id="container">
+  <div id="header">
+    <h1 class="brand">PjaxによるSPAのテスト</h1>
+    <ul class="navi">
+      <li><a href="index.html">Home</a></li>
+      <li class="active"><a href="index2.html">Page2</a></li>
+    </ul>
+  </div>
+  <div id="primary">
+    <h2>ページ2</h2>
+    <p>ここはページ2です。ここはページ2です。ここはページ2です。ここはページ2です。</p>
+  </div>
+  <ul>
+    <li>移動先のページでリロードされるとそのページの内容になるため、結局は従来通りのHTMLコーディングが欠かせない。</li>
+    <li>ユーザのUX向上に役立つほか、ElectronやWebViewアプリにも活用はできる。</li>
+  </ul>
 
-    </div>
-    <script src="js/spica.min.js"></script>
-    <script src="js/pjax-api.min.js"></script>
-    <script>
-        var Pjax = require('pjax-api').Pjax;
-        new Pjax({
-            areas: [
-                // try to use the first query.
-                '#header, #primary',
-                // fallback, retrying with the second query.
-                '#container',
-                // fallback.
-                'body'
-            ]
-        });
-    </script>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/spica.min.js"></script>
+<script src="js/pjax-api.min.js"></script>
+<script src="js/pjax-config.js"></script>
 </body>
 
 </html>

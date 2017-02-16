@@ -1,18 +1,26 @@
 var gulp = require('gulp');
-var browserSync = require("browser-sync");
+var browserSync = require('browser-sync');
+const sass = require('gulp-sass');
 
-// タスクの設定
-gulp.task("browserSyncTask", function () {
+gulp.task('browserSyncTask', function () {
     browserSync({
         server: {
-            baseDir: "./" // ルートとなるディレクトリを指定
+            baseDir: './' // root directory
         }
-    });
-
-    // srcフォルダ以下のファイルを監視
-    gulp.watch("./**", function() {
-        browserSync.reload();   // ファイルに変更があれば同期しているブラウザをリロード
     });
 });
 
-gulp.task('default', ['browserSyncTask']);
+gulp.task('sass', function(){
+    gulp.src('./sass/*.scss')
+        .pipe(sass({
+            outputStyle: 'expanded'
+        }))
+        .pipe(gulp.dest('./css/'));
+});
+
+gulp.task('watch', function(){
+    gulp.watch("./sass/*.scss", ['sass']);
+    gulp.watch(['./*.html', './css/*.css']).on('change', browserSync.reload);
+});
+
+gulp.task('default', ['browserSyncTask','watch']);

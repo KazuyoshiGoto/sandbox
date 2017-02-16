@@ -2,62 +2,38 @@
 <html lang="ja">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <style>
-    h1 {
-        color: #900;
-    }
-    #header, #primary {
-        background: #eee;
-    }
-    </style>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div id="container">
-        <div id="brand"><h1>PjaxによるSPAのテスト</h1></div>
-        <div id="header">
-            <h2>トップページ</h2>
-        </div>
-        <div id="primary">
-            <h3>トップページの見出しです。</h3>
-            <p>ここはトップページです。ここはトップページです。ここはトップページです。ここはトップページです。</p>
-            <p><a href="index2.html">ページ2へ</a></p>
-        </div>
-        <div id="secondary">
-            <pre>var Pjax = require('pjax-api').Pjax;
-new Pjax({
-    areas: [
-        // try to use the first query.
-        '#header, #primary',
-        // fallback, retrying with the second query.
-        '#container',
-        // fallback.
-        'body'
-    ]
-});</pre>
-            <p>サンプルのまま上記コードを設定している。</p>
-            <p>#container内の#hader,#primaryは該当するページの内容に書き換わる（グレーの箇所）。またbodyの外側も書き換わる。</p>
-            <p>大して加工してないのでブラウザで見ると普通に遷移してるように見えるが、DevToolで開くとElementsが書き換わっておりSPAになっていることが分かる。</p>
-        </div>
+<div id="container">
+  <div id="header">
+    <h1 class="brand">PjaxによるSPAのテスト</h1>
+    <ul class="navi">
+      <li class="active"><a href="index.html">Home</a></li>
+      <li><a href="index2.html">Page2</a></li>
+    </ul>
+  </div>
+  <div id="primary">
+    <h2>ホーム</h2>
+    <p>ここはホームです。ここはホームです。ここはホームです。ここはホームです。</p>
+  </div>
+  <ul>
+    <li>「<a href="js/pjax-config.js">pjax-config.js</a>」にサンプルのまま上記コードを設定している。</li>
+    <li>#container内の#hader,#primaryは該当するページの内容に書き換わる（グレーの箇所）。</li>
+    <li>bodyの外側も書き換わる。</li>
+    <li>大して加工してないのでブラウザで見ると普通に遷移してるように見えるが、DevToolで開くとElementsが書き換わっておりSPAになっていることが分かる。</li>
+    <li>GulpのbrowserSyncでプレビューしていると、たまにbrowserSyncがエラーを吐いて真っ白になる。</li>
+  </ul>
 
-    </div>
-    <script src="js/spica.min.js"></script>
-    <script src="js/pjax-api.min.js"></script>
-    <script>
-        var Pjax = require('pjax-api').Pjax;
-        new Pjax({
-            areas: [
-                // try to use the first query.
-                '#header, #primary',
-                // fallback, retrying with the second query.
-                '#container',
-                // fallback.
-                'body'
-            ]
-        });
-    </script>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/spica.min.js"></script>
+<script src="js/pjax-api.min.js"></script>
+<script src="js/pjax-config.js"></script>
 </body>
 
 </html>

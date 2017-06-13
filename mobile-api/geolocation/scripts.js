@@ -45,6 +45,8 @@ function initMap() {
   );
 }
 
+// APIドキュメントでは呼び出し時に initMap をコールバックしていたが、
+// それでは読み込み速度の都合、スマホでエラーが出るため確実に initMap を実行する
 $(document).ready(function() {
   initMap();
 });

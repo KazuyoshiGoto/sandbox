@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+}
+h1 {
+    margin: 0;
+    padding: 0 10px;
+    line-height: 60px;
+    font-size: 24px;
+}
+#map {
+    position: relative;
+    width: 100vw;
+    height: calc(100vh - 60px);
+    margin: 0 auto;
+    background: #eee;
+}
+#map .loading {
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    top: calc(50% - 32px);
+    left: calc(50% - 32px);
+    font-size: 64px;
+    color: #999;
+}
+#map .nogeo {
+    position: absolute;
+    top: calc(50% - .5em);
+    width: 100vw;
+    margin: 0;
+    text-align: center;
+}

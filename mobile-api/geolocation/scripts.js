@@ -1,16 +1,8 @@
-function checkGeolocation() {
-  // Geolocation API対応チェック
-  if (!navigator.geolocation) {
-    alert("この端末では位置情報が取得できません");
-  }
-}
-
 var map;
 var marker;
 function initMap() {
   if (navigator.geolocation) {
     $("#map").html('<div class="loading"><i class="fa fa-spinner fa-spin"></i></div>');
-//    $("#map:before").show();
   } else {
     $("#map").html('<p class="nogeo">この端末では位置情報が取得できません</p>');
     return false;

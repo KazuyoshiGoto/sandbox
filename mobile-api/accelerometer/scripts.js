@@ -32,6 +32,12 @@
     // Z軸
     var z = event.acceleration.z;
 
+    var html = "";
+    html += "X加速 : " + x + "<br>";
+    html += "Y加速 : " + y + "<br>";
+    html += 'Z加速 : ' + z;
+    $("#debug").html(html);
+
     $arrow.stop();
 
     var l = 7;

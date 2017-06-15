@@ -1,9 +1,10 @@
 (function () {
 
-  var $zo;
+  var $orientationObj;
 
   $(function () {
-    $zo = $("#zo");
+    //$orientationObj = $("#zo");
+    $orientationObj = $(".cube");
     window.addEventListener("deviceorientation", deviceorientationHandler);
   });
 
@@ -13,11 +14,11 @@
    */
   function deviceorientationHandler(event) {
     //ジャイロセンサー情報取得
-    // X軸
+    // beta = X軸
     var beta = event.beta;
-    // Y軸
+    // gamma = Y軸
     var gamma = event.gamma;
-    // Z軸
+    // alpha = Z軸
     var alpha = event.alpha;
     var html = "";
     html += "X回転 : " + beta + "<br>";
@@ -25,7 +26,7 @@
     html += 'Z回転 : ' + alpha;
     $("#debug").html(html);
 
-    $zo.css({
+    $orientationObj.css({
       "-webkit-transform": "rotateX(" + (180 + beta) + "deg) rotateY(" + (180 + gamma) + "deg) rotateZ(" + alpha + "deg)",
       "transform": "rotateX(" + (180 + beta) + "deg) rotateY(" + (180 + gamma) + "deg) rotateZ(" + alpha + "deg)"
     })

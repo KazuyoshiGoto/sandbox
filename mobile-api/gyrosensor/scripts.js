@@ -3,7 +3,6 @@
   var $orientationObj;
 
   $(function () {
-    //$orientationObj = $("#zo");
     $orientationObj = $(".cube");
     window.addEventListener("deviceorientation", deviceorientationHandler);
   });

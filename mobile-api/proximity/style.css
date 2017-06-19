@@ -1,0 +1,35 @@
+body {
+  background: #333;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+#debug {
+  width: 100%;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #000;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+#near, #far {
+  color: #fff;
+  width: 100vw;
+  line-height: 100vh;
+  position: absolute;
+  text-align: center;
+}
+
+#near {
+  display: none;
+  font-size:240px;
+}
+#far {
+  font-size:80px;
+}

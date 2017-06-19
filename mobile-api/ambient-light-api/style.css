@@ -1,0 +1,26 @@
+body {
+  background: #333;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+#circle {
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+#lux_txt {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  color: #000;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0 0 5px 1px rgba(255,255,255,.8);
+}

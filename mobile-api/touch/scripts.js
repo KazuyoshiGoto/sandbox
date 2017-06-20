@@ -55,7 +55,7 @@
     html += "座標 X: " + clientX + " / Y: " + clientY + "<br>";
     html += "感圧 : " + force + "<br>";
     html += "タッチ直径 : 約" + Math.round(radiusY) * 2 + "px<br>";
-    html += "タッチ入射角 : " + rotationAngle + ;
+    html += "タッチ入射角 : " + rotationAngle ;
     //html += "クライアント座標X : " + clientX + "<br>";
     //html += "クライアント座標Y : " + clientY + "<br>";
     //html += "ページ座標X : " + pageX + "<br>";

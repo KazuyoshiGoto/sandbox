@@ -12,16 +12,6 @@ body {
   user-select: none;
 }
 
-#desc {
-  position: absolute;
-  width: 100vw;
-  line-height: 2em;
-  bottom: 0px;
-  color: #666;
-  text-align: center;
-  font-size: 18px;
-}
-
 #circle {
   background: #fff;
   position: absolute;

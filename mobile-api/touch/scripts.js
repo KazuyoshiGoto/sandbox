@@ -20,6 +20,7 @@
     circle = $("#circle");
   });
 
+  // タッチ時＆ドラッグ時
   function touchmoveHandler(event) {
     //同時タッチ数
     touchCount = event.touches.length;
@@ -56,14 +57,15 @@
     circle.css({
       "opacity": .8,
       "top": clientY + "px",
-      "left": clientX + "px"
+      "left": clientX + "px",
+      "transform": "scale(" + force + ")"
     })
   }
 
+  //指を話したら消す
   function touchendHandler(event) {
     circle.css({
-      "opacity": 0,
-      "transform": "scale(" + force + ")"
+      "opacity": 0
     })
   }
 })();

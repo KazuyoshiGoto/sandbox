@@ -7,6 +7,7 @@
   var pageY;
   var screenX;
   var screenY;
+  var force;
 
   $(function () {
     //タッチイベント取得
@@ -36,9 +37,13 @@
     screenX = event.touches[0].screenX;
     screenY = event.touches[0].screenY;
 
+    //感圧
+    force = event.touches[0].force;
+
     var html = "";
     html += "同時タッチ数 : " + touchCount + "<br>";
-    html += "座標 X:" + clientX + " / Y: " + clientY;
+    html += "座標 X: " + clientX + " / Y: " + clientY + "<br>";
+    html += "感圧 : " + force;
     //html += "クライアント座標X : " + clientX + "<br>";
     //html += "クライアント座標Y : " + clientY + "<br>";
     //html += "ページ座標X : " + pageX + "<br>";
@@ -46,9 +51,10 @@
     //html += "スクリーン座標X : " + screenX + "<br>";
     //html += "スクリーン座標Y : " + screenY ;
     $("#debug").html(html);
+    console.log(event.touches);
 
     circle.css({
-      "opacity": 1,
+      "opacity": .8,
       "top": clientY + "px",
       "left": clientX + "px"
     })

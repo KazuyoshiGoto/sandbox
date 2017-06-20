@@ -26,6 +26,8 @@ body {
   left: 50%;
   margin: -50px 0 0 -50px;
   opacity: 0;
+  transition: opacity .3s ease;
+  z-index: 2;
 }
 
 #debug {

@@ -46,13 +46,12 @@
     //タッチ面積
     radiusX = event.touches[0].radiusX;
     radiusY = event.touches[0].radiusY;
-    var radiusSum = (radiusX * 2) + (radiusY * 2);
 
     var html = "";
     html += "同時タッチ数 : " + touchCount + "<br>";
     html += "座標 X: " + clientX + " / Y: " + clientY + "<br>";
     html += "感圧 : " + force + "<br>";
-    html += "タッチ面積 : 約" + radiusSum + "px";
+    html += "タッチ直径 : 約" + radiusY * 2 + "px";
     //html += "クライアント座標X : " + clientX + "<br>";
     //html += "クライアント座標Y : " + clientY + "<br>";
     //html += "ページ座標X : " + pageX + "<br>";

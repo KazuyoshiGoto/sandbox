@@ -6,6 +6,11 @@ body {
   overflow: hidden;
   font-family: sans-serif;
 }
+* {
+  -webkit-user-select: none; /* Chrome, Safari, and Opera */
+  -webkit-touch-callout: none; /* Disable Android and iOS callouts*/
+  user-select: none;
+}
 
 #desc {
   width: 90vw;
@@ -13,7 +18,7 @@ body {
   margin: auto;
   color: #666;
   text-align: center;
-  font-size: 32px;
+  font-size: 24px;
 }
 
 #circle {

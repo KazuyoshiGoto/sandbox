@@ -54,8 +54,7 @@
     html += "同時タッチ数 : " + touchCount + "<br>";
     html += "座標 X: " + clientX + " / Y: " + clientY + "<br>";
     html += "感圧 : " + force + "<br>";
-    html += "タッチ直径 : 約" + Math.round(radiusY) * 2 + "px<br>";
-    html += "タッチ入射角 : " + rotationAngle ;
+    html += "タッチ半径 : " + radiusY + "px";
     //html += "クライアント座標X : " + clientX + "<br>";
     //html += "クライアント座標Y : " + clientY + "<br>";
     //html += "ページ座標X : " + pageX + "<br>";
@@ -75,7 +74,7 @@
     //pageY
     //radiusX       タッチしている軸のX軸半径→ペンや指の太さが影響する
     //radiusY
-    //rotationAngle スタイラスとの角度。タッチ入射角？
+    //rotationAngle スタイラスなどの入射角？ 非安定プロパティ
     //screenX       スクリーン座標：モニタ全体のうちどこをタッチしているか
     //screenY
     //target        タッチしている対象DOM

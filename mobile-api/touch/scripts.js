@@ -56,8 +56,8 @@
 
     circle.css({
       "opacity": .8,
-      "top": clientY + "px",
-      "left": clientX + "px",
+      "top": clientY - 100 + "px",
+      "left": clientX - 100 + "px",
       "transform": "scale(" + force + ")"
     })
   }

@@ -51,7 +51,7 @@
     html += "同時タッチ数 : " + touchCount + "<br>";
     html += "座標 X: " + clientX + " / Y: " + clientY + "<br>";
     html += "感圧 : " + force + "<br>";
-    html += "タッチ直径 : 約" + radiusY * 2 + "px";
+    html += "タッチ直径 : 約" + Math.round(radiusY) * 2 + "px";
     //html += "クライアント座標X : " + clientX + "<br>";
     //html += "クライアント座標Y : " + clientY + "<br>";
     //html += "ページ座標X : " + pageX + "<br>";

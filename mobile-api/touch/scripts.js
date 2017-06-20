@@ -10,6 +10,7 @@
   var force;
   var radiusX;
   var radiusY;
+  var rotationAngle;
 
   $(function () {
     //タッチイベント取得
@@ -47,11 +48,14 @@
     radiusX = event.touches[0].radiusX;
     radiusY = event.touches[0].radiusY;
 
+    rotationAngle = event.touches[0].rotationAngle;
+
     var html = "";
     html += "同時タッチ数 : " + touchCount + "<br>";
     html += "座標 X: " + clientX + " / Y: " + clientY + "<br>";
     html += "感圧 : " + force + "<br>";
-    html += "タッチ直径 : 約" + Math.round(radiusY) * 2 + "px";
+    html += "タッチ直径 : 約" + Math.round(radiusY) * 2 + "px<br>";
+    html += "タッチ入射角 : " + rotationAngle + ;
     //html += "クライアント座標X : " + clientX + "<br>";
     //html += "クライアント座標Y : " + clientY + "<br>";
     //html += "ページ座標X : " + pageX + "<br>";
@@ -71,7 +75,7 @@
     //pageY
     //radiusX       タッチしている軸のX軸半径→ペンや指の太さが影響する
     //radiusY
-    //rotationAngle
+    //rotationAngle スタイラスとの角度。タッチ入射角？
     //screenX       スクリーン座標：モニタ全体のうちどこをタッチしているか
     //screenY
     //target        タッチしている対象DOM

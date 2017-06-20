@@ -62,7 +62,8 @@
 
   function touchendHandler(event) {
     circle.css({
-      "opacity": 0
+      "opacity": 0,
+      "transform": "scale(" + force + ")"
     })
   }
 })();

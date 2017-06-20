@@ -52,7 +52,7 @@
     //html += "スクリーン座標X : " + screenX + "<br>";
     //html += "スクリーン座標Y : " + screenY ;
     $("#debug").html(html);
-    console.log(event.touches);
+    //console.log(event.touches);
 
     circle.css({
       "opacity": .8,

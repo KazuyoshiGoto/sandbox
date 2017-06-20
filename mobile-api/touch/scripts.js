@@ -8,6 +8,8 @@
   var screenX;
   var screenY;
   var force;
+  var radiusX;
+  var radiusY;
 
   $(function () {
     //タッチイベント取得
@@ -41,10 +43,16 @@
     //感圧
     force = event.touches[0].force;
 
+    //タッチ面積
+    radiusX = event.touches[0].radiusX;
+    radiusY = event.touches[0].radiusY;
+    var radiusSum = (radiusX * 2) + (radiusY * 2);
+
     var html = "";
     html += "同時タッチ数 : " + touchCount + "<br>";
     html += "座標 X: " + clientX + " / Y: " + clientY + "<br>";
-    html += "感圧 : " + force;
+    html += "感圧 : " + force + "<br>";
+    html += "タッチ面積 : 約" + radiusSum + "px";
     //html += "クライアント座標X : " + clientX + "<br>";
     //html += "クライアント座標Y : " + clientY + "<br>";
     //html += "ページ座標X : " + pageX + "<br>";
@@ -52,7 +60,23 @@
     //html += "スクリーン座標X : " + screenX + "<br>";
     //html += "スクリーン座標Y : " + screenY ;
     $("#debug").html(html);
-    //console.log(event.touches);
+    console.log(event.touches);
+
+    // touch eventメモ
+    //
+    //clientX       クライアント座標：ブラウザのクライアント領域のうちどこをタッチしているか
+    //clientY
+    //force         感圧
+    //identifier    マルチタッチ識別子→1つ目は0
+    //pageX         ページ座標：ページ全体のうちどこをタッチしているか
+    //pageY
+    //radiusX       タッチしている軸のX軸半径→ペンや指の太さが影響する
+    //radiusY
+    //rotationAngle
+    //screenX       スクリーン座標：モニタ全体のうちどこをタッチしているか
+    //screenY
+    //target
+    //body
 
     circle.css({
       "opacity": .8,

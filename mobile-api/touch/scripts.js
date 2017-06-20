@@ -74,8 +74,7 @@
     //rotationAngle
     //screenX       スクリーン座標：モニタ全体のうちどこをタッチしているか
     //screenY
-    //target
-    //body
+    //target        タッチしている対象DOM
 
     circle.css({
       "opacity": .8,

@@ -55,14 +55,8 @@
     html += "座標 X: " + clientX + " / Y: " + clientY + "<br>";
     html += "感圧 : " + force + "<br>";
     html += "タッチ半径 : " + radiusY + "px";
-    //html += "クライアント座標X : " + clientX + "<br>";
-    //html += "クライアント座標Y : " + clientY + "<br>";
-    //html += "ページ座標X : " + pageX + "<br>";
-    //html += "ページ座標Y : " + pageY + "<br>";
-    //html += "スクリーン座標X : " + screenX + "<br>";
-    //html += "スクリーン座標Y : " + screenY ;
     $("#debug").html(html);
-    console.log(event.touches);
+    //console.log(event.touches);
 
     // touch eventメモ
     //

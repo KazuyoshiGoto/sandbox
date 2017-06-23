@@ -61,5 +61,4 @@ function initMap() {
 // それでは読み込み速度の都合、スマホでエラーが出るため確実に initMap を実行する
 $(function() {
   initMap();
-  window.addEventListener("deviceorientation", deviceorientationHandler);
 });

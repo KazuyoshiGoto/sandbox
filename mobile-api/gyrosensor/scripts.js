@@ -24,6 +24,7 @@
     html += "Y回転 : " + alpha + "<br>";
     html += 'Z回転 : ' + gamma;
     $("#debug").html(html);
+    console.log(event);
 
     $orientationObj.css({
       //betaを-90度調整することで、スマホを立てた状態で正面にしている

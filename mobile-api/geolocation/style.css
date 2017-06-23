@@ -13,7 +13,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background: #000;
+  background: rgba(0,0,0,.6);
   color: #ffffff;
   font-size: 14px;
 }
@@ -28,7 +28,7 @@ h1 {
 #map {
   position: relative;
   width: 100vw;
-  height: calc(100vh - 60px);
+  height: 100vh;
   margin: 0 auto;
   background: #eee;
 }

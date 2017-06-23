@@ -9,7 +9,8 @@ function initMap() {
   }
 
   // 現在地の取得
-  navigator.geolocation.getCurrentPosition(function(position) {
+  navigator.geolocation.watchPosition(function(position) {
+  //navigator.geolocation.getCurrentPosition(function(position) {
     // 緯度経度の取得
     latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
     console.log(position);
@@ -58,6 +59,7 @@ function initMap() {
 
 // APIドキュメントでは呼び出し時に initMap をコールバックしていたが、
 // それでは読み込み速度の都合、スマホでエラーが出るため確実に initMap を実行する
-$(document).ready(function() {
+$(function() {
   initMap();
+  window.addEventListener("deviceorientation", deviceorientationHandler);
 });

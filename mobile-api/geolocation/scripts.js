@@ -15,6 +15,15 @@ function initMap() {
     console.log(position);
     console.log(latLng);
 
+    var html = "";
+    html += "緯度 : " + position.coords.latitude + "<br>";
+    html += "経度 : " + position.coords.longitude + "<br>";
+    html += '緯度経度の誤差 : ' + position.coords.accuracy + "<br>";
+    html += "高度 : " + position.coords.altitude + "<br>";
+    html += "方角 : " + position.coords.heading + "<br>";
+    html += "スピード : " + position.coords.heading;
+    $("#debug").html(html);
+
     // 地図の作成
     map = new google.maps.Map(document.getElementById('map'), {
       center: latLng,

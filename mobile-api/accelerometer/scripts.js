@@ -41,7 +41,7 @@
     $arrow.stop();
 
     var l = 7; //この数値を越えたら反応
-    if (x > -l) { // 右
+    if (x > l) { // 右
       $arrow.css({
         x: -stageW
       });
@@ -51,7 +51,7 @@
         "transform": "rotate(90deg)"
       });
     }
-    else if (x < l) { // 左
+    else if (x < -l) { // 左
       $arrow.css({
         x: stageW
       });
@@ -61,7 +61,7 @@
         "transform": "rotate(-90deg)"
       });
     }
-    else if (y > -l) { // 上
+    else if (y > l) { // 上
       $arrow.css({
         y: stageH
       });
@@ -71,7 +71,7 @@
         "transform": "rotate(0deg)"
       });
     }
-    else if (y < l) { // 下
+    else if (y < -l) { // 下
       $arrow.css({
         y: -stageH
       });

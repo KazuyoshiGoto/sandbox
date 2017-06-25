@@ -79,7 +79,7 @@
     }
     else return;
 
-    isMotion = true;
+    //isMotion = true;
 
     $arrow.delay(500).transition({x: 0, y: 0}, 300, "easeOutCubic", function () {
       //isMotion = false

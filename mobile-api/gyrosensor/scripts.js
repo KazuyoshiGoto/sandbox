@@ -22,16 +22,7 @@
     var html = "";
     html += "Y軸(alpha) : " + alpha + "<br>";
     html += "X軸(beta) : " + beta + "<br>";
-    html += 'Z軸(gamma) : ' + gamma + "<br>";
-    html += 'absolute : ' + event.absolute + "<br>";
-    html += 'bubbles : ' + event.bubbles + "<br>";
-    html += 'cancelBubble : ' + event.cancelBubble + "<br>";
-    html += 'cancelable : ' + event.cancelable + "<br>";
-    html += 'composed : ' + event.composed + "<br>";
-    html += 'defaultPrevented : ' + event.defaultPrevented + "<br>";
-    html += 'eventPhase : ' + event.eventPhase + "<br>";
-    html += 'returnValue : ' + event.returnValue + "<br>";
-    html += 'returnValue : ' + event.returnValue;
+    html += 'Z軸(gamma) : ' + gamma;
     $("#debug").html(html);
     console.log(event);
 

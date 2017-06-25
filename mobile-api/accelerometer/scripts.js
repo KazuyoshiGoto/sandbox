@@ -38,9 +38,9 @@
     html += 'Z加速 : ' + z;
     $("#debug").html(html);
 
-    $arrow.stop();
+    //$arrow.stop();
 
-    var l = 7; //この数値を越えたら反応
+    var l = 3; //この数値を越えたら反応
     if (x > l) { // 右
       $arrow.css({
         x: -stageW
@@ -79,11 +79,11 @@
     }
     else return;
 
-    isMotion = true;
+    //isMotion = true;
 
-    $arrow.delay(500).transition({x: 0, y: 0}, 300, "easeOutCubic", function () {
-      //isMotion = false
-    });
+    //$arrow.delay(500).transition({x: 0, y: 0}, 300, "easeOutCubic", function () {
+    //  isMotion = false
+    //});
   }
 
   function resizeHandler(event) {

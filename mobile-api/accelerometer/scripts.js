@@ -40,7 +40,7 @@
 
     //$arrow.stop();
 
-    var l = 7; //この数値を越えたら反応
+    var l = 3; //この数値を越えたら反応
     if (x > l) { // 右
       $arrow.css({
         x: -stageW

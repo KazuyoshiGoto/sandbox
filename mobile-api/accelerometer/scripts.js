@@ -46,9 +46,8 @@
         x: -stageW
       });
       $arrow.children("img").css({
-        "-webkit-transform": "rotate(90deg)",
-        "-moz-transform": "rotate(90deg)",
-        "transform": "rotate(90deg)"
+        //"transform": "rotate(90deg)"
+        "transform": "rotate(-90deg)"
       });
     }
     else if (x < -l) { // 左
@@ -56,9 +55,8 @@
         x: stageW
       });
       $arrow.children("img").css({
-        "-webkit-transform": "rotate(-90deg)",
-        "-moz-transform": "rotate(-90deg)",
-        "transform": "rotate(-90deg)"
+        //"transform": "rotate(-90deg)"
+        "transform": "rotate(90deg)"
       });
     }
     else if (y > l) { // 上
@@ -66,9 +64,8 @@
         y: stageH
       });
       $arrow.children("img").css({
-        "-webkit-transform": "rotate(0deg)",
-        "-moz-transform": "rotate(0deg)",
-        "transform": "rotate(0deg)"
+        //"transform": "rotate(0deg)"
+        "transform": "rotate(180deg)"
       });
     }
     else if (y < -l) { // 下
@@ -76,9 +73,8 @@
         y: -stageH
       });
       $arrow.children("img").css({
-        "-webkit-transform": "rotate(180deg)",
-        "-moz-transform": "rotate(180deg)",
-        "transform": "rotate(180deg)"
+        //"transform": "rotate(180deg)"
+        "transform": "rotate(0deg)"
       });
     }
     else return;

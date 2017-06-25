@@ -38,7 +38,7 @@
     html += 'Z加速 : ' + z;
     $("#debug").html(html);
 
-    $arrow.stop();
+    //$arrow.stop();
 
     var l = 7; //この数値を越えたら反応
     if (x > l) { // 右

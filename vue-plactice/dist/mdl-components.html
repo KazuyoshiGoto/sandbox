@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <title>MDL Style | SiteTitle</title>
+  </head>
+  <!--サンプル表示用スタイル-->
+  <style>
+    html,body,p {
+      font-size: 16px;
+    }
+    .grid-demo .mdl-cell{
+      background: #eee;
+      padding:5px;
+    }
+    .demo-card > .mdl-card__title {
+      color: #fff;
+      height: 176px;
+      background: url('https://getmdl.io/assets/demos/welcome_card.jpg') center / cover;
+    }
+    .demo-card > .mdl-card__menu {
+      color: #fff;
+    }
+    
+  </style>
+  <body>
+    <div class="mdl-layout mdl-js-layout">
+      <header class="mdl-layout__header mdl-layout__header--scroll">
+        <div class="mdl-layout__header-row"><span class="mdl-layout-title">SiteTitle</span>
+          <div class="mdl-layout-spacer"></div>
+          <nav class="mdl-navigation"><a class="mdl-navigation__link" href="#hoge">Link</a><a class="mdl-navigation__link" href="#hoge">Link</a><a class="mdl-navigation__link" href="#hoge">Link</a></nav>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <div class="mdl-layout-title">SiteTitle</div>
+        <nav class="mdl-navigation"><a class="mdl-navigation__link" href="#hoge">Link</a><a class="mdl-navigation__link" href="#hoge">Link</a><a class="mdl-navigation__link" href="#hoge">Link</a></nav>
+      </div>
+      <main class="mdl-layout__content">
+        <section>
+          <h1>MDL Components</h1>
+        </section>
+        <section>
+          <h2>Grid</h2>
+          <div class="mdl-grid grid-demo">
+            <div class="mdl-cell mdl-cell--1-col">1</div>
+            <div class="mdl-cell mdl-cell--1-col">1</div>
+            <div class="mdl-cell mdl-cell--1-col">1</div>
+            <div class="mdl-cell mdl-cell--1-col">1</div>
+            <div class="mdl-cell mdl-cell--1-col">1</div>
+            <div class="mdl-cell mdl-cell--1-col">1</div>
+            <div class="mdl-cell mdl-cell--1-col">1</div>
+            <div class="mdl-cell mdl-cell--1-col">1</div>
+            <div class="mdl-cell mdl-cell--1-col">1</div>
+            <div class="mdl-cell mdl-cell--1-col">1</div>
+            <div class="mdl-cell mdl-cell--1-col">1</div>
+            <div class="mdl-cell mdl-cell--1-col">1</div>
+          </div>
+          <div class="mdl-grid grid-demo">
+            <div class="mdl-cell mdl-cell--2-col">2</div>
+            <div class="mdl-cell mdl-cell--2-col">2</div>
+            <div class="mdl-cell mdl-cell--2-col">2</div>
+            <div class="mdl-cell mdl-cell--2-col">2</div>
+            <div class="mdl-cell mdl-cell--2-col">2</div>
+            <div class="mdl-cell mdl-cell--2-col">2</div>
+          </div>
+          <div class="mdl-grid grid-demo">
+            <div class="mdl-cell mdl-cell--3-col">3</div>
+            <div class="mdl-cell mdl-cell--3-col">3</div>
+            <div class="mdl-cell mdl-cell--3-col">3</div>
+            <div class="mdl-cell mdl-cell--3-col">3</div>
+          </div>
+          <div class="mdl-grid grid-demo">
+            <div class="mdl-cell mdl-cell--4-col">4</div>
+            <div class="mdl-cell mdl-cell--4-col">4</div>
+            <div class="mdl-cell mdl-cell--4-col">4</div>
+          </div>
+          <div class="mdl-grid grid-demo">
+            <div class="mdl-cell mdl-cell--6-col">6</div>
+            <div class="mdl-cell mdl-cell--6-col">6</div>
+          </div>
+        </section>
+        <section>
+          <h2>Grid & Card</h2>
+          <p>mdl-gridにmdl-cardを<b>単純に収めるのはNG。</b></p>
+          <p>mdl-cellとmdl-cardでwidthの取り方が別に存在するため、めり込みが発生する。</p>
+          <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col">
+              <div class="demo-card mdl-card mdl-shadow--2dp">
+                <div class="mdl-card__title">
+                  <h2 class="mdl-card__title-text">Welcome</h2>
+                </div>
+                <div class="mdl-card__supporting-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Mauris sagittis pellentesque lacus eleifend lacinia...
+                </div>
+                <div class="mdl-card__actions mdl-card--border"><a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Get Started</a></div>
+                <div class="mdl-card__menu">
+                  <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"><i class="material-icons">share</i></button>
+                </div>
+              </div>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <div class="demo-card mdl-card mdl-shadow--2dp">
+                <div class="mdl-card__title">
+                  <h2 class="mdl-card__title-text">Welcome</h2>
+                </div>
+                <div class="mdl-card__supporting-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Mauris sagittis pellentesque lacus eleifend lacinia...
+                </div>
+                <div class="mdl-card__actions mdl-card--border"><a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Get Started</a></div>
+                <div class="mdl-card__menu">
+                  <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"><i class="material-icons">share</i></button>
+                </div>
+              </div>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <div class="demo-card mdl-card mdl-shadow--2dp">
+                <div class="mdl-card__title">
+                  <h2 class="mdl-card__title-text">Welcome</h2>
+                </div>
+                <div class="mdl-card__supporting-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Mauris sagittis pellentesque lacus eleifend lacinia...
+                </div>
+                <div class="mdl-card__actions mdl-card--border"><a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Get Started</a></div>
+                <div class="mdl-card__menu">
+                  <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"><i class="material-icons">share</i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h3>Grid & Card 調整版</h3>
+          <p>mdl-cardにw100で横幅いっぱいに広がるよう調整した。これなら表示に耐える。</p>
+          <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col">
+              <div class="demo-card mdl-card mdl-shadow--2dp w100">
+                <div class="mdl-card__title">
+                  <h2 class="mdl-card__title-text">Welcome</h2>
+                </div>
+                <div class="mdl-card__supporting-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Mauris sagittis pellentesque lacus eleifend lacinia...
+                </div>
+                <div class="mdl-card__actions mdl-card--border"><a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Get Started</a></div>
+                <div class="mdl-card__menu">
+                  <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"><i class="material-icons">share</i></button>
+                </div>
+              </div>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <div class="demo-card mdl-card mdl-shadow--2dp w100">
+                <div class="mdl-card__title">
+                  <h2 class="mdl-card__title-text">Welcome</h2>
+                </div>
+                <div class="mdl-card__supporting-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Mauris sagittis pellentesque lacus eleifend lacinia...
+                </div>
+                <div class="mdl-card__actions mdl-card--border"><a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Get Started</a></div>
+                <div class="mdl-card__menu">
+                  <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"><i class="material-icons">share</i></button>
+                </div>
+              </div>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <div class="demo-card mdl-card mdl-shadow--2dp w100">
+                <div class="mdl-card__title">
+                  <h2 class="mdl-card__title-text">Welcome</h2>
+                </div>
+                <div class="mdl-card__supporting-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Mauris sagittis pellentesque lacus eleifend lacinia...
+                </div>
+                <div class="mdl-card__actions mdl-card--border"><a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Get Started</a></div>
+                <div class="mdl-card__menu">
+                  <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"><i class="material-icons">share</i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2>Icon</h2>
+          <p>FontAwesomeと違いアイコン別にクラスはなく、<b>material-icons</b>に内包されるテキストによってアイコンが変わる。</p><a href="https://material.io/icons/" target="_blank">https://material.io/icons/</a>
+          <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--1-col center"><i class="material-icons">face</i>
+              <p>face</p>
+            </div>
+            <div class="mdl-cell mdl-cell--1-col center"><i class="material-icons">favorite</i>
+              <p>favorite</p>
+            </div>
+            <div class="mdl-cell mdl-cell--1-col center"><i class="material-icons">star</i>
+              <p>star</p>
+            </div>
+            <div class="mdl-cell mdl-cell--1-col center"><i class="material-icons">lock</i>
+              <p>lock</p>
+            </div>
+            <div class="mdl-cell mdl-cell--1-col center"><i class="material-icons">room</i>
+              <p>room</p>
+            </div>
+            <div class="mdl-cell mdl-cell--1-col center"><i class="material-icons">thumb_up</i>
+              <p>thumb_up</p>
+            </div>
+            <div class="mdl-cell mdl-cell--1-col center"><i class="material-icons">error</i>
+              <p>error</p>
+            </div>
+            <div class="mdl-cell mdl-cell--1-col center"><i class="material-icons">email</i>
+              <p>email</p>
+            </div>
+            <div class="mdl-cell mdl-cell--1-col center"><i class="material-icons">send</i>
+              <p>send</p>
+            </div>
+            <div class="mdl-cell mdl-cell--1-col center"><i class="material-icons">create</i>
+              <p>create</p>
+            </div>
+            <div class="mdl-cell mdl-cell--1-col center"><i class="material-icons">save</i>
+              <p>save</p>
+            </div>
+            <div class="mdl-cell mdl-cell--1-col center"><i class="material-icons">schedule</i>
+              <p>schedule</p>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2>Footer</h2>
+          <p>mega-footerはレスポンシブ時に画面下に残り続けるため、Webアプリでしか使えない。</p>
+          <p>Webサイトにはmini-footerが妥当。もしくは独自に作る。</p>
+        </section>
+        <footer class="mdl-mini-footer">
+          <div>
+            <div class="mdl-logo">Title</div>
+            <ul class="mdl-mini-footer__link-list">
+              <li><a href="#">Menu1</a></li>
+              <li><a href="#">Menu2</a></li>
+            </ul>
+          </div>
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+//Sass Variables
+@import "_includes/variables";
+
+//Style
+h1 {
+  color: $blue;
+}
+section {
+  max-width: $width-full;
+  margin: 0 auto;
+}
+
+.flex-list {
+  display: flex;
+}
+
+//Common CSS
+@import "_includes/common";

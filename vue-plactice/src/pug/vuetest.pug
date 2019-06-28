@@ -1,0 +1,54 @@
+//- Variables Setting
+include _includes/_variables.pug
+-
+  var pagehead = {
+    pageTitle : 'Vueテスト'
+  }
+
+//- START HTML
+doctype html
+html(lang="ja")
+  include _includes/_head.pug
+  style.
+    section {
+      padding: 1em 0;
+      border-top: solid 1px #eee;
+    }
+
+  //- START BODY
+  body
+
+    section
+      h1 Vueテスト
+
+    section#app
+      p {{ message }}
+
+    section#app-2
+      p(v-bind:title="message") Hover your mouse over me for a few seconds to see my dynamically bound title!
+    
+    section#app-3
+      p(v-if="seen") Now you see me
+
+    section#app-4
+      ol
+        li(v-for="todo in todos") {{ todo.text }}
+
+    section#app-5
+      p {{ message }}
+      button(v-on:click="reverseMessage") Reverse Message
+
+    section#app-6
+      p {{ message }}
+      input(v-model="message")
+
+    section#app-7
+      ol
+        todo-item(v-for="item in groceryList" v-bind:todo="item")
+
+    section#app-8
+      div(v-bind:style="app8style") {{ message }}
+
+    script(src="https://unpkg.com/vue@2.5.13/dist/vue.min.js")
+    script(src="js/app.js")
+    //script(type='text/javascript' src="js/vuetest.js")
